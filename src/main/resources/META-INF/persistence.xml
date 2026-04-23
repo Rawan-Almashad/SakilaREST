@@ -1,0 +1,52 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             version="3.0"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence
+                                 https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+
+    <persistence-unit name="soapRa" transaction-type="RESOURCE_LOCAL">
+
+        <!-- Hibernate Provider -->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!-- ENTITIES -->
+        <class>org.iti.rest.entity.Actor</class>
+        <class>org.iti.rest.entity.Address</class>
+        <class>org.iti.rest.entity.Category</class>
+        <class>org.iti.rest.entity.City</class>
+        <class>org.iti.rest.entity.Country</class>
+        <class>org.iti.rest.entity.Customer</class>
+        <class>org.iti.rest.entity.Film</class>
+        <class>org.iti.rest.entity.FilmActor</class>
+        <class>org.iti.rest.entity.FilmCategory</class>
+        <class>org.iti.rest.entity.FilmText</class>
+        <class>org.iti.rest.entity.Inventory</class>
+        <class>org.iti.rest.entity.Language</class>
+        <class>org.iti.rest.entity.Payment</class>
+        <class>org.iti.rest.entity.Rental</class>
+        <class>org.iti.rest.entity.Staff</class>
+        <class>org.iti.rest.entity.Store</class>
+
+        <properties>
+
+            <!-- DB CONNECTION -->
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/sakila"/>
+            <property name="jakarta.persistence.jdbc.user" value="root"/>
+            <property name="jakarta.persistence.jdbc.password" value="root"/>
+
+            <!-- HIBERNATE -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+
+            <!-- DEBUG (VERY IMPORTANT FOR YOU) -->
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+
+            <!-- SCHEMA MANAGEMENT -->
+            <property name="hibernate.hbm2ddl.auto" value="validate"/>
+
+        </properties>
+
+    </persistence-unit>
+
+</persistence>

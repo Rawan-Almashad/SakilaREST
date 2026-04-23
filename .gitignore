@@ -1,0 +1,43 @@
+﻿# Java & Maven build output
+target/
+classes/
+*.class
+*.war
+*.jar
+
+# IntelliJ IDEA (keep structure, ignore personal settings)
+.idea/
+!.idea/.gitignore
+.idea/workspace.xml
+.idea/dataSources.local.xml
+.idea/dataSources/
+.idea/shelf/
+.idea/caches/
+*.iml
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Database sensitive info (if it contains passwords)
+**/persistence.xml.local
+.env
+
+# Tomcat work directories
+tomcat.*/
+work/
+temp/
+
+# Test output
+surefire-reports/
+test-output/
+
+# Backup files
+*.backup
+*.orig
+*.old

@@ -1,5 +1,6 @@
 package org.iti.rest.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import org.hibernate.annotations.ColumnDefault;
 import java.math.BigDecimal;
@@ -53,6 +54,7 @@ public class Film {
     @Column(name = "special_features", columnDefinition = "set('Trailers','Commentaries','Deleted Scenes','Behind the Scenes')")
     private String specialFeatures;
 
+    @JsonIgnore
     @ColumnDefault("CURRENT_TIMESTAMP")
     @Column(name = "last_update", nullable = false)
     private Instant lastUpdate;

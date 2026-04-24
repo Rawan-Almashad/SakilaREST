@@ -23,7 +23,3 @@ A RESTful web service project for managing DVD rental database (Sakila database)
   - Stores
   - Staff
   - Customers
-
-USE sakila;
-SOURCE /path/to/sakila-schema.sql;
-SOURCE /path/to/sakila-data.sql;

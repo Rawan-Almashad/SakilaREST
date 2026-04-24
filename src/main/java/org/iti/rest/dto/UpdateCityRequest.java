@@ -2,7 +2,6 @@ package org.iti.rest.dto;
 
 import jakarta.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement
 public class UpdateCityRequest {
     private Short id;
     private String city;

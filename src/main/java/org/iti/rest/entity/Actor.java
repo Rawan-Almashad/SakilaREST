@@ -1,5 +1,6 @@
 package org.iti.rest.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
@@ -23,6 +24,7 @@ public class Actor {
     @Column(name = "last_name", nullable = false, length = 45)
     private String lastName;
 
+    @JsonIgnore
     @ColumnDefault("CURRENT_TIMESTAMP")
     @Column(name = "last_update", nullable = false)
     private Instant lastUpdate;

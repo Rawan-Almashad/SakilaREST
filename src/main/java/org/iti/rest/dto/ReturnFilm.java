@@ -2,7 +2,7 @@ package org.iti.rest.dto;
 
 public class ReturnFilm {
 
-
+    private Short id;
     private String title;
     private String description;
 
@@ -20,5 +20,13 @@ public class ReturnFilm {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Short getId() {
+        return id;
+    }
+
+    public void setId(Short id) {
+        this.id = id;
     }
 }
